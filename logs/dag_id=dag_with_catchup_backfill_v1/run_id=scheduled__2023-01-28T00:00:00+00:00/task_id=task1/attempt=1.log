@@ -1,0 +1,25 @@
+[2023-02-02T14:31:36.770+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2023-01-28T00:00:00+00:00 [queued]>
+[2023-02-02T14:31:51.129+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2023-01-28T00:00:00+00:00 [queued]>
+[2023-02-02T14:31:51.521+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-02T14:31:51.541+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 6
+[2023-02-02T14:31:51.566+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-02T14:32:12.846+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): task1> on 2023-01-28 00:00:00+00:00
+[2023-02-02T14:32:17.115+0000] {standard_task_runner.py:55} INFO - Started process 15819 to run task
+[2023-02-02T14:32:19.722+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_catchup_backfill_v1', 'task1', 'scheduled__2023-01-28T00:00:00+00:00', '--job-id', '1337', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_catchup_and_backfill.py', '--cfg-path', '/tmp/tmpbnughcnc']
+[2023-02-02T14:32:20.828+0000] {standard_task_runner.py:83} INFO - Job 1337: Subtask task1
+[2023-02-02T14:33:08.902+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2023-01-28T00:00:00+00:00 [running]> on host 178c757a8fee
+[2023-02-02T14:41:37.019+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=archana
+AIRFLOW_CTX_DAG_ID=dag_with_catchup_backfill_v1
+AIRFLOW_CTX_TASK_ID=task1
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-28T00:00:00+00:00
+[2023-02-02T14:42:11.504+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-02-02T14:42:16.999+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo This is a simple Bash Command!']
+[2023-02-02T14:42:50.338+0000] {subprocess.py:86} INFO - Output:
+[2023-02-02T14:43:09.924+0000] {subprocess.py:93} INFO - This is a simple Bash Command!
+[2023-02-02T14:43:13.946+0000] {subprocess.py:97} INFO - Command exited with return code 0

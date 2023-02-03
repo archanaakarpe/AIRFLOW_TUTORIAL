@@ -1,0 +1,34 @@
+[2023-02-02T11:24:52.693+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2022-11-04T00:00:00+00:00 [queued]>
+[2023-02-02T11:24:53.074+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2022-11-04T00:00:00+00:00 [queued]>
+[2023-02-02T11:24:53.102+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-02T11:24:53.112+0000] {taskinstance.py:1280} INFO - Starting attempt 4 of 6
+[2023-02-02T11:24:53.122+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-02T11:24:53.759+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): task1> on 2022-11-04 00:00:00+00:00
+[2023-02-02T11:24:54.111+0000] {standard_task_runner.py:55} INFO - Started process 9219 to run task
+[2023-02-02T11:24:54.264+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_catchup_backfill_v1', 'task1', 'scheduled__2022-11-04T00:00:00+00:00', '--job-id', '1064', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_catchup_and_backfill.py', '--cfg-path', '/tmp/tmprt6yjg42']
+[2023-02-02T11:24:54.343+0000] {standard_task_runner.py:83} INFO - Job 1064: Subtask task1
+[2023-02-02T11:24:56.060+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2022-11-04T00:00:00+00:00 [running]> on host 178c757a8fee
+[2023-02-02T11:25:00.786+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=archana
+AIRFLOW_CTX_DAG_ID=dag_with_catchup_backfill_v1
+AIRFLOW_CTX_TASK_ID=task1
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-04T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-04T00:00:00+00:00
+[2023-02-02T11:25:00.950+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-02-02T11:25:00.994+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'This is a simple Bash Command!']
+[2023-02-02T11:25:01.337+0000] {subprocess.py:86} INFO - Output:
+[2023-02-02T11:25:01.358+0000] {subprocess.py:93} INFO - /bin/bash: line 1: This: command not found
+[2023-02-02T11:25:01.361+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2023-02-02T11:25:02.075+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2023-02-02T11:25:03.608+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_with_catchup_backfill_v1, task_id=task1, execution_date=20221104T000000, start_date=20230202T112452, end_date=20230202T112503
+[2023-02-02T11:25:05.397+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1064 for task task1 (Bash command failed. The command returned a non-zero exit code 127.; 9219)
+[2023-02-02T11:25:06.777+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-02-02T11:25:07.556+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

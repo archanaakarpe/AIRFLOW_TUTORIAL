@@ -1,0 +1,11 @@
+[2023-02-02T14:33:33.910+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2023-01-31T00:00:00+00:00 [queued]>
+[2023-02-02T14:36:12.908+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_with_catchup_backfill_v1.task1 scheduled__2023-01-31T00:00:00+00:00 [queued]>
+[2023-02-02T14:36:16.619+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-02T14:36:17.801+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 6
+[2023-02-02T14:36:18.397+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-02T14:37:35.232+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): task1> on 2023-01-31 00:00:00+00:00
+[2023-02-02T14:37:52.651+0000] {standard_task_runner.py:55} INFO - Started process 15946 to run task
+[2023-02-02T14:38:07.342+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_catchup_backfill_v1', 'task1', 'scheduled__2023-01-31T00:00:00+00:00', '--job-id', '1340', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_catchup_and_backfill.py', '--cfg-path', '/tmp/tmptqcllcux']
+[2023-02-02T14:38:07.470+0000] {standard_task_runner.py:83} INFO - Job 1340: Subtask task1

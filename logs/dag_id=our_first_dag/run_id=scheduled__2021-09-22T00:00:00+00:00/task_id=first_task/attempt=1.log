@@ -1,0 +1,11 @@
+[2023-02-01T06:18:40.877+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: our_first_dag.first_task scheduled__2021-09-22T00:00:00+00:00 [queued]>
+[2023-02-01T06:18:42.751+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: our_first_dag.first_task scheduled__2021-09-22T00:00:00+00:00 [queued]>
+[2023-02-01T06:18:42.936+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-01T06:18:43.064+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 6
+[2023-02-01T06:18:43.073+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-01T06:18:49.644+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): first_task> on 2021-09-22 00:00:00+00:00
+[2023-02-01T06:18:49.947+0000] {standard_task_runner.py:55} INFO - Started process 2894 to run task
+[2023-02-01T06:18:50.853+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'our_first_dag', 'first_task', 'scheduled__2021-09-22T00:00:00+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/our_first_dag.py', '--cfg-path', '/tmp/tmpasze9nc6']
+[2023-02-01T06:18:50.896+0000] {standard_task_runner.py:83} INFO - Job 91: Subtask first_task
